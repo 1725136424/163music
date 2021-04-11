@@ -1,0 +1,178 @@
+.search-box {
+    width: 100%;
+    height: 100%;
+    padding: 0.88rem 0 0.98rem 0;
+    box-sizing: border-box;
+}
+
+.search-box .search-main {
+    width: 100%;
+    height: 100%;
+}
+
+.search-box .search-main .search-main-in {
+    width: 100%;
+}
+
+.search-box .search-main .search-main-in .ad {
+    width: 100%;
+    margin-top: 0.1rem;
+    position: relative;
+}
+
+.search-box .search-main .search-main-in .ad img {
+    width: 100%;
+    border-radius: 0.1rem;
+}
+
+.search-box .search-main .search-main-in .ad span {
+    position: absolute;
+    right: 0.1rem;
+    top: 0.1rem;
+    color: #ffffff;
+    font-size: 0.24rem;
+}
+
+.search-box .search-main .search-main-in .history {
+    width: 100%;
+    height: 1.6rem;
+    overflow: hidden;
+}
+
+.search-box .search-main .search-main-in .history .history-top {
+    margin-top: 0.15rem;
+    width: 100%;
+    height: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.24rem;
+    font-weight: bold;
+    align-items: center;
+}
+
+.search-box .search-main .search-main-in .history .history-top img {
+    height: 0.6rem;
+}
+
+.search-box .search-main .search-main-in .history .history-body {
+    margin-top: 0.2rem;
+    width: 100%;
+    height: 0.7rem;
+    display: flex;
+    justify-content: start;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    padding-bottom: 0.3rem;
+}
+
+.search-box .search-main .search-main-in .history .history-body li {
+    white-space: nowrap;
+    padding: 0.07rem 0.15rem;
+    font-size: 0.27rem;
+    border-radius: 0.3rem;
+    background: #f8f8f8;
+    line-height: 0.49rem;
+    text-align: center;
+    margin-right: 0.2rem;
+}
+
+.search-box .search-main .search-main-in .hot-history {
+    width: 100%;
+    margin-top: 0.2rem;
+}
+
+.search-box .search-main .search-main-in .hot-history .hot-history-top {
+    width: 100%;
+    height: 0.3rem;
+    font-size: 0.25rem;
+    font-weight: bold;
+}
+
+.search-box .search-main .search-main-in .hot-history .hot-history-body {
+    margin-top: 0.2rem;
+}
+
+.search-box .search-main .search-main-in .hot-history .hot-history-body li {
+    width: 100%;
+    height: 1.34rem;
+    display: flex;
+    justify-content: start;
+}
+
+.search-box .search-main .search-main-in .hot-history .hot-history-body li .hot-left {
+    width: 0.45rem;
+    height: 100%;
+    text-align: center;
+    line-height: 1.34rem;
+    font-size: 0.3rem;
+    color: #666666;
+    margin-right: 0.2rem;
+}
+
+.search-box .search-main .search-main-in .hot-history .hot-history-body li .hot-right {
+    height: 100%;
+}
+
+.search-box .search-main .search-main-in .hot-history .hot-history-body li .hot-right .hot-right-top {
+    height: 50%;
+    display: flex;
+    justify-content: start;
+    line-height: 0.67rem;
+}
+
+.search-box .search-main .search-main-in .hot-history .hot-history-body li .hot-right .hot-right-top h3 {
+    font-size: 0.32rem;
+    font-weight: bold;
+}
+
+.search-box .search-main .search-main-in .hot-history .hot-history-body li .hot-right .hot-right-top span {
+    font-size: 0.26rem;
+    color: #cccccc;
+    margin: 0 0.37rem;
+}
+
+.search-box .search-main .search-main-in .hot-history .hot-history-body li .hot-right .hot-right-top img {
+    height: 0.35rem;
+    margin-top: 0.1rem;
+}
+
+.search-box .search-main .search-main-in .hot-history .hot-history-body li .hot-right .hot-right-bottom {
+    height: 50%;
+    font-size: 0.26rem;
+    color: #666666;
+}
+
+.search-box .search-keyWord {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.search-box .search-keyWord .search-content {
+    margin-top: 0.2rem;
+    width: 100%;
+    height: 0.88rem;
+    color: darkblue;
+    font-size: 0.3rem;
+    border-bottom: 1px solid #cccccc;
+    line-height: 0.88rem;
+}
+
+.search-box .search-keyWord .search-association {
+    width: 100%;
+}
+
+.search-box .search-keyWord .search-association li {
+    overflow: hidden;
+    width: 100%;
+    height: 0.88rem;
+    font-size: 0.3rem;
+    color: #333333;
+    line-height: 0.88rem;
+    border-bottom: 1px solid #cccccc;
+}
+
+.search-box .search-keyWord .search-association li img {
+    vertical-align: middle;
+    margin-right: 0.2rem;
+}

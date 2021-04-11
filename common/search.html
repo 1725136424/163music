@@ -1,0 +1,63 @@
+<div class="search-box">
+    <div class="search-main">
+        <div class="search-main-in">
+            <div class="ad">
+                <img src="./../common/images/search-banner.gif" alt="">
+                <span class="close">X</span>
+            </div>
+            <div class="history">
+                <div class="history-top">
+                    <span>搜索历史</span>
+                    <img src="./../common/images/search-it666-delete.png" alt="" class="delete">
+                </div>
+                <ul class="history-body">
+                </ul>
+            </div>
+            <div class="hot-history">
+                <div class="hot-history-top">
+                    热搜榜
+                </div>
+                <ul class="hot-history-body">
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="search-keyWord">
+        <div class="search-content"></div>
+        <ul class="search-association">
+        </ul>
+    </div>
+</div>
+<link rel="stylesheet" href="./../common/css/search.css">
+<script id="hotSearch" type="text/html">
+    <% for(let i = 0; i < data.length; i++){ %>
+    <li>
+        <% if (i < 3) {%>
+        <div class="hot-left" style="color: red"><%=i + 1%></div>
+        <% } else { %>
+        <div class="hot-left"><%=i + 1%></div>
+        <% } %>
+        <div class="hot-right">
+            <div class="hot-right-top">
+                <h3 class="song-name"><%=data[i].searchWord%></h3>
+                <span class="num"><%=data[i].score%></span>
+                <img src="<%=data[i].iconUrl%>" alt="">
+            </div>
+            <div class="hot-right-bottom">
+                <div class="hot-desc">
+                    <%=data[i].content%>
+                </div>
+            </div>
+        </div>
+    </li>
+    <% } %>
+</script>
+<script id="search-association" type="text/html">
+    <% for(let i = 0; i < allMatch.length; i++){ %>
+    <li>
+        <img src="./../common/images/topbar-it666-search.png" alt="">
+        <%=allMatch[i].keyword%>
+    </li>
+    <% } %>
+</script>

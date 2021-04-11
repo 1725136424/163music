@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>网易云音乐</title>
+    <!--可以让部分国产浏览器默认采用高速模式渲染页面-->
+    <meta content="webkit" name="renderer">
+    <!--为了让 IE 浏览器运行最新的渲染模式下-->
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="网易云音乐，音乐，播放器，网易，下载，播放，DJ，免费，明星，精选，歌单，识别音乐，收藏，分享音乐，音乐互动，高音质，320K，音乐社交，官网，移动站，music.163.com"
+          name="keywords">
+    <meta content="网易云音乐是一款专注于发现与分享的音乐产品，依托专业音乐人、DJ、好友推荐及社交功能，为用户打造全新的音乐生活。" name="description">
+    <script>
+        //获取当前设备像素比
+        let scale = 1 / parseInt(window.devicePixelRatio + "");
+        document.write(`<meta name="viewport" content="width=device-width, initial-scale=${scale}, maximum-scale=${scale}, minimum-scale=${scale}, user-scalable=no">`);
+        let rootSize = window.innerWidth / 7.5 + "px";
+        document.documentElement.style.fontSize = rootSize;
+    </script>
+    <link href="../favicon.ico" rel="short icon">
+    <link href="../apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="../apple-touch-icon114.png" rel="apple-touch-icon" sizes="114x114">
+    <link href="../apple-touch-icon152.png" rel="apple-touch-icon" sizes="152x152">
+    <link href="../apple-touch-icon180.png" rel="apple-touch-icon" sizes="180x180">
+    <link href="../css/reset.css" rel="stylesheet">
+    <link href="../css/swiper.css" rel="stylesheet">
+    <link href="css/player.less" rel="stylesheet/less">
+</head>
+<body>
+
+<div class="body-box">
+    <!--头部开始-->
+    <div class="header">
+        <div class="header-left">
+            <img alt="" src="images/player-it666-back.png">
+        </div>
+        <div class="header-center">
+            <p class="song-name">
+            </p>
+            <p class="song-artist">
+            </p>
+        </div>
+        <div class="header-right">
+            <img alt="" src="images/player-it666-share.png">
+        </div>
+    </div>
+    <!--头部结束-->
+
+    <!--内容开始-->
+    <div class="body">
+        <div class="default">
+            <div class="default-top">
+                <img alt="" src="images/player-it666-needle.png">
+            </div>
+            <div class="default-center">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                    </div>
+                    <div class="swiper-box"></div>
+                    <div class="bg-desc"></div>
+                </div>
+            </div>
+            <ul class="default-footer">
+                <li><img alt="" src="images/player-it666-favorite.png"></li>
+                <li><img alt="" src="images/player-it666-download.png"></li>
+                <li><img alt="" src="images/player-it666-effect.png"></li>
+                <li><img alt="" src="images/player-it666-comment.png"></li>
+                <li><img alt="" src="images/player-it666-more.png"></li>
+            </ul>
+        </div>
+        <div class="lyric">
+            <div class="lyric-top">
+                <div class="volume-icon"></div>
+                <div class="volume-progress-bar">
+                    <div class="volume-progress">
+                        <div class="volume-dot"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="lyric-area">
+                <div class="lyric-center">
+                    <div class="lyric-center-in">
+
+                    </div>
+                    <div class="lyric-time-line">
+                        <div class="lyric-time-line-left">
+                            <img alt="" src="images/player-small-play.png">
+                        </div>
+                        <div class="line"></div>
+                        <div class="lyric-time-line-right">00:00</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--内容结束-->
+
+    <!--底部开始-->
+    <div class="footer">
+        <div class="footer-top">
+            <div class="current-time">00:00</div>
+            <div class="time-progress-bar">
+                <div class="time-progress">
+                    <div class="time-dot"></div>
+                </div>
+            </div>
+            <div class="durations"></div>
+        </div>
+        <ul class="footer-bottom">
+            <li class="model order"></li>
+            <li class="pre"></li>
+            <li class="play"></li>
+            <li class="next"></li>
+            <li class="list">
+                <div class="songList-modal">
+                    <div class="temp-modal"></div>
+                    <div class="songList">
+                        <div class="songList-top">
+                            <div class="songList-top-left">
+                                <i class="modal order"></i>
+                                <span></span>
+                            </div>
+                            <div class="songList-top-right">
+                                <img src="images/player-small-favorite.png" alt="">
+                                <span>收藏全部</span>
+                                <img class="clearPlayList" src="images/player-it666-delete.png" alt="">
+                            </div>
+                        </div>
+                        <div class="songList-center">
+                            <ul class="songList-center-IScroll">
+                            </ul>
+                        </div>
+                        <div class="songList-footer">
+                            关闭
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--底部结束-->
+</div>
+
+<!--高斯背景开始-->
+<div class="background"></div>
+<div class="foreground"></div>
+<!--高斯背景结束-->
+
+<!--歌源开始-->
+<audio>
+</audio>
+<!--歌源结束-->
+
+<!--模板开始-->
+<script id="modal" type="text/html">
+    <% for (let i = $data.length - 1; i >= 0; i--) {%>
+    <li class="subLi">
+        <div class="songList-center-left">
+            <%=$data[i].name%>-<%=$data[i].artist%>
+        </div>
+        <div class="songList-center-right">
+            <img src="images/player-it666-close.png" alt="">
+        </div>
+    </li>
+    <% } %>
+</script>
+<!--模板结束-->
+<script src="../js/less.js"></script>
+<script src="../js/zepto.js"></script>
+<script src="../js/event.js"></script>
+<script src="../js/ajax.js"></script>
+<script src="../js/fx.js"></script>
+<script src="../js/fx_methods.js"></script>
+<script src="../js/selector.js"></script>
+<script src="../js/iscroll-probe.js"></script>
+<script src="../js/swiper.js"></script>
+<script src="../js/axios.js"></script>
+<script src="../js/api.js"></script>
+<script src="../js/template-web.js"></script>
+<script src="../js/clamp.js"></script>
+<script src="../js/tool.js"></script>
+<script src="../js/loadHtml.js"></script>
+<script src="js/progress.js"></script>
+<script src="js/play.js"></script>
+<script src="js/player.js"></script>
+</body>
+</html>

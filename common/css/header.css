@@ -1,0 +1,200 @@
+.header {
+    z-index: 999;
+    padding: 0 0.2rem;
+    box-sizing: border-box;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 0.88rem;
+}
+
+.header .header-center {
+    background: #86cdea;
+    width: 100%;
+    height: 100%;
+    float: left;
+}
+
+.header .header-center .header-center-in {
+    margin: 0 0.56rem;
+    height: 100%;
+    padding: 0 0.7rem;
+}
+
+.header .header-center .header-center-in .search {
+    width: 100%;
+    height: 0.7rem;
+    margin-top: 0.09rem;
+    border-radius: 0.35rem;
+    background: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.header .header-center .header-center-in .search .search-icon {
+    position: absolute;
+    width: 0.56rem;
+    height: 0.56rem;
+    display: inline-block;
+    background: url("./../images/topbar-it666-search.png") no-repeat center;
+    background-size: 100% auto;
+    top: 50%;
+    transform: translatey(-50%);
+    left: 0.4rem;
+    z-index: 999;
+}
+
+.header .header-center .header-center-in .search .input-search {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding-left: 1.05rem;
+    font-size: 0.3rem;
+    color: #c9c9c9;
+}
+
+.header .header-center .header-center-in .me-title {
+    display: none;
+    width: 100%;
+    height: 100%;
+    font-size: 0.35rem;
+    line-height: 0.88rem;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.header .header-center .header-center-in .friend-toolBar {
+    display: none;
+    width: 60%;
+    height: 0.64rem;
+    margin: 0.12rem auto 0 auto;
+    border-radius: 0.35rem;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #ffcbc8;
+}
+
+.header .header-center .header-center-in .friend-toolBar span {
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+    box-sizing: border-box;
+    line-height: 0.64rem;
+    font-size: 0.32rem;
+    font-weight: bold;
+    position: relative;
+    text-align: center;
+    z-index: 666;
+    color: #fd271b;
+}
+
+.header .header-center .header-center-in .friend-toolBar span.active {
+    color: #ffffff;
+}
+
+.header .header-center .header-center-in .friend-toolBar i {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 0.35rem;
+    background: #fd271b;
+}
+
+.header .header-cancel {
+    display: none;
+}
+
+.header .header-left,
+.header .header-right {
+    margin-top: 0.16rem;
+    width: 0.56rem;
+    height: 0.56rem;
+    float: left;
+}
+
+.header .header-left {
+    margin-left: -100%;
+    background: url(" ./../images/topbar-it666-discern.png") no-repeat center center;
+    background-size: 100% auto;
+}
+
+.header .header-right {
+    margin-left: -0.56rem;
+    background: url("./../images/topbar-it666-play.png") no-repeat center center;
+    background-size: 100% auto;
+}
+
+.header.active .header-center-in {
+    margin: 0 1.12rem 0 0;
+    padding: 0 1.2rem 0 0.2rem;
+}
+
+.header.active .header-cancel {
+    float: left;
+    display: inline-block;
+    margin-left: -1.75rem;
+    width: 0.56rem;
+    height: 0.56rem;
+    margin-top: 0.16rem;
+    white-space: nowrap;
+    line-height: 0.56rem;
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.3rem;
+}
+
+.header.active .header-left {
+    display: none;
+}
+
+.header.active .header-right {
+    background: url("./../images/topbar-it666-category.png") no-repeat center center;
+    background-size: 100% auto;
+}
+
+.header.video .header-left {
+    background: url("./../images/topbar-it666-video.png") no-repeat center center;
+    background-size: 100% auto;
+}
+
+.header.me .header-left {
+    background: url("./../images/topbar-it666-cloud.png") no-repeat center center;
+    background-size: 100% auto;
+}
+
+.header.me .header-center-in .search {
+    display: none;
+}
+
+.header.me .header-center-in .me-title {
+    display: block;
+}
+
+.header.friend .header-left {
+    background: url("./../images/topbar-it666-add.png") no-repeat center center;
+    background-size: 100% auto;
+}
+
+.header.friend .header-center-in .search {
+    display: none;
+}
+
+.header.friend .header-center-in .friend-toolBar {
+    display: block;
+}
+
+.header.account .header-left {
+    background: url("./../images/topbar-it666-scan.png") no-repeat center center;
+    background-size: 100% auto;
+}
+
+.header.account .header-center-in .search {
+    display: none;
+}

@@ -1,0 +1,84 @@
+.footer {
+    z-index: 999;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0.98rem;
+    background: #fdbfca;
+}
+
+.footer .footer-nav {
+    display: flex;
+    justify-content: start;
+}
+
+.footer .footer-nav li {
+    width: 0.56rem;
+    text-align: center;
+    margin: 0 0.46rem;
+    white-space: nowrap;
+    font-size: 0.2rem;
+}
+
+.footer .footer-nav li .footer-icon {
+    margin: 0.08rem auto 0.02rem auto;
+    width: 0.56rem;
+    height: 0.56rem;
+    display: block;
+    border-radius: 50%;
+}
+
+.footer .footer-nav li:nth-of-type(1) .footer-icon {
+    background: url("./../../common/images/toolbar-it666-discovery-normal.png") no-repeat center;
+    background-size: 100% auto;
+}
+
+.footer .footer-nav li:nth-of-type(2) .footer-icon {
+    background: url("./../../common/images/toolbar-it666-video-normal.png") no-repeat center;
+    background-size: 100% auto;
+}
+
+.footer .footer-nav li:nth-of-type(3) .footer-icon {
+    background: url("./../../common/images/toolbar-it666-me-normal.png") no-repeat center;
+    background-size: 100% auto;
+}
+
+.footer .footer-nav li:nth-of-type(4) .footer-icon {
+    background: url("./../../common/images/toolbar-it666-friend-normal.png") no-repeat center;
+    background-size: 100% auto;
+}
+
+.footer .footer-nav li:nth-of-type(5) .footer-icon {
+    background: url("./../../common/images/toolbar-it666-account-normal.png") no-repeat center;
+    background-size: 100% auto;
+}
+
+.footer .footer-nav li.active {
+    color: #fd271b;
+}
+
+.footer .footer-nav li:nth-of-type(1).active .footer-icon {
+    background: #fd271b url("./../../common/images/toolbar-it666-discovery-selected.png") no-repeat center;
+    background-size: 100% auto;
+}
+
+.footer .footer-nav li:nth-of-type(2).active .footer-icon {
+    background: #fd271b url("./../../common/images/toolbar-it666-video-selected.png") no-repeat center;
+    background-size: 100% auto;
+}
+
+.footer .footer-nav li:nth-of-type(3).active .footer-icon {
+    background: #fd271b url("./../../common/images/toolbar-it666-me-selected.png") no-repeat center;
+    background-size: 100% auto;
+}
+
+.footer .footer-nav li:nth-of-type(4).active .footer-icon {
+    background: #fd271b url("./../../common/images/toolbar-it666-friend-selected.png") no-repeat center;
+    background-size: 100% auto;
+}
+
+.footer .footer-nav li:nth-of-type(5).active .footer-icon {
+    background: #fd271b url("./../../common/images/toolbar-it666-account-selected.png") no-repeat center;
+    background-size: 100% auto;
+}

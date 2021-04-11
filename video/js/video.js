@@ -1,0 +1,7 @@
+$(function () {
+    loadHeader();
+
+    loadSearch();
+
+    loadFooter();
+});

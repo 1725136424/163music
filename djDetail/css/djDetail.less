@@ -1,0 +1,575 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+body {
+  background-color: transparent;
+  font: 24px Helvetica, sans-serif, STHeiTi;
+  color: #333;
+  outline: 0;
+}
+
+img {
+  vertical-align: bottom;
+}
+
+.header {
+  z-index: 666;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 88/100rem;
+  padding: 0 20/100rem;
+  box-sizing: border-box;
+
+  & > div {
+    float: left;
+  }
+
+  .header-left {
+    margin-top: 17/100rem;
+    width: 54/100rem;
+    height: 54/100rem;
+    margin-left: -100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .header-right {
+    margin-top: 17/100rem;
+    width: 116/100rem;
+    height: 54/100rem;
+    margin-left: -116/100rem;
+    display: flex;
+    justify-content: space-between;
+
+    img {
+      width: 54/100rem;
+      height: 54/100rem;
+    }
+
+    .share {
+      position: relative;
+      top: 3/100rem;
+    }
+  }
+
+  .header-center-in {
+    width: 100%;
+
+    .header-center {
+      margin: 0 116/100rem 0 54/100rem;
+      height: 88/100rem;
+      line-height: 88/100rem;
+      font-size: 32/100rem;
+      font-weight: bold;
+      color: #ffffff;
+
+      span {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.5);
+
+  .main-in {
+    width: 100%;
+    .main-top {
+      width: 100%;
+      height: 600/100rem;
+      position: relative;
+
+      .bg {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        left: 0;
+        top: 0;
+
+        img {
+          z-index: 22;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 100%;
+        }
+
+        .modal {
+          position: fixed;
+          z-index: 999;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.5);
+        }
+      }
+
+      .top-info {
+        z-index: 99999;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100/100rem;
+        padding: 0 20/100rem;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .info-left {
+          .title {
+            color: #ffffff;
+            font-size: 32/100rem;
+            font-weight: bold;
+          }
+
+          .subscribe {
+            font-size: 20/100rem;
+            color: rgba(255, 255, 255, 0.4);
+          }
+        }
+
+        .info-right {
+          color: #ffffff;
+          font-size: 20/100rem;
+          height: 50/100rem;
+          padding: 0 20/100rem;
+          line-height: 50/100rem;
+          border-radius: 25/100rem;
+          text-align: center;
+          background: rgba(255, 0, 0, 0.7);
+
+          img {
+            height: 20/100rem;
+            position: relative;
+            top: -15/100rem;
+
+          }
+        }
+      }
+    }
+
+    .main-bottom {
+      border-top-left-radius: 30/100rem;
+      border-top-right-radius: 30/100rem;
+      background: #ffffff;
+      overflow: hidden;
+      position: relative;
+      z-index: 999;
+      width: 100%;
+      left: 0;
+      top: 0;
+      padding-bottom: 105/100rem;
+
+      .bottom-content {
+        overflow: hidden;
+        position: relative;
+        left: 0;
+        top: 0;
+
+        .bottom-nav {
+          z-index: 10000;
+          position: relative;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 88/100rem;
+          border-bottom: 1px solid #cccccc;
+          background: #ffffff;
+          padding: 0 20/100rem;
+          box-sizing: border-box;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          color: #333333;
+          font-weight: bold;
+
+          .nav-left, .nav-right {
+            padding: 0 10/100rem;
+          }
+
+          .nav-right {
+            span {
+              font-size: 20/100rem;
+            }
+          }
+
+          i {
+            position: absolute;
+            height: 5/100rem;
+            background: red;
+            bottom: 0;
+            left: 0;
+          }
+
+          & > div {
+            &.active {
+              color: red;
+            }
+          }
+        }
+
+        .bottom-container {
+          & > div {
+            display: none;
+
+            &.active {
+              display: block;
+            }
+          }
+
+          .detail {
+            width: 100%;
+            color: #333333;
+            padding: 0 20/100rem;
+            box-sizing: border-box;
+
+            .info {
+              margin-top: 30/100rem;
+              width: 100%;
+              height: 200/100rem;
+
+              .info-top {
+                width: 100%;
+                height: 60/100rem;
+                font-size: 26/100rem;
+                font-weight: bold;
+                line-height: 60/100rem;
+              }
+
+              .info-bottom {
+                width: 100%;
+                height: 140/100rem;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .info-bottom-left {
+                  display: flex;
+                  justify-content: start;
+                  align-items: center;
+
+                  .pic {
+                    position: relative;
+
+                    img {
+                      &:nth-of-type(1) {
+                        width: 120/100rem;
+                        height: 120/100rem;
+                        border-radius: 50%;
+                      }
+
+                      &:nth-of-type(2) {
+                        position: absolute;
+                        right: 0;
+                        bottom: 0;
+                        width: 30/100rem;
+                        height: 30/100rem;
+                        border-radius: 50%;
+                      }
+                    }
+
+                  }
+
+                  .song-info {
+                    margin-left: 20/100rem;
+
+                    .singer-name {
+                      font-size: 32/100rem;
+                      font-weight: bold;
+                    }
+
+                    .personality {
+                      font-weight: 24/100rem;
+                      color: #666666;
+                    }
+                  }
+                }
+
+                .info-bottom-right {
+                  color: #ff0000;
+                  height: 50/100rem;
+                  padding: 0 20/100rem;
+                  line-height: 50/100rem;
+                  text-align: center;
+                  border-radius: 25/100rem;
+                  border: 1px solid #ff0000;
+                  font-size: 27/100rem;
+
+                }
+              }
+            }
+
+            .desc {
+              width: 100%;
+              margin-top: 40/100rem;
+              font-size: 26/100rem;
+              font-weight: bold;
+              color: #333333;
+              line-height: 40/100rem;
+
+              .desc-title {
+                margin-top: 10/100rem;
+                color: #666666;
+              }
+            }
+
+            .comment {
+              width: 100%;
+              margin-top: 70/100rem;
+              font-size: 26/100rem;
+              font-weight: bold;
+              color: #333333;
+              line-height: 40/100rem;
+
+              .comment-by {
+                margin-top: 20/100rem;
+                width: 100%;
+
+                li {
+                  padding: 20/100rem 0;
+                  width: 100%;
+                  display: flex;
+                  justify-content: start;
+                  border-bottom: 1px solid #cccccc;
+
+                  .comment-left {
+                    img {
+                      width: 60/100rem;
+                      height: 60/100rem;
+                      border-radius: 50%;
+                      margin-right: 20/100rem;
+                    }
+                  }
+
+                  .comment-right {
+                    .by {
+                      color: #666666;
+                    }
+
+                    .content {
+                      margin: 20/100rem 0 20/100rem 0;
+                      font-size: 30/100rem;
+                    }
+
+                    .cover-by {
+                      font-size: 24/100rem;
+                      color: #666666;
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          .tool-bar {
+            position: relative;
+            left: 0;
+            top: 0;
+            width: 100%;
+
+            .tool-default {
+              position: relative;
+              z-index: 999;
+              line-height: 60/100rem;
+              padding: 0 20px;
+              transform: translateX(-20/100rem);
+              width: 100%;
+              height: 60/100rem;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              background: #ffffff;
+              font-size: 28/100rem;
+              font-weight: bold;
+
+              .default-right {
+                display: flex;
+                justify-content: start;
+                align-items: center;
+
+                .sort {
+                  margin-right: 30/100rem;
+
+                  &.active {
+                    img {
+                      transform: rotate(180deg);
+                    }
+                  }
+                }
+
+                img {
+                  width: 28/100rem;
+                  height: 28/100rem;
+                  position: relative;
+                  top: -15/100rem;
+                }
+              }
+            }
+
+            .tool-selected {
+              position: relative;
+              z-index: 666;
+              background: #ffffff;
+              display: none;
+              justify-content: space-between;
+              align-items: center;
+              width: 100%;
+              height: 88/100rem;
+              font-size: 32/100rem;
+              font-weight: bold;
+
+              .selected-left {
+                color: #333333;
+                display: flex;
+                justify-content: start;
+                align-items: center;
+
+                .circle {
+                  width: 56/100rem;
+                  height: 56/100rem;
+                  border-radius: 50%;
+                  border: 1px solid #cccccc;
+                  margin-right: 20/100rem;
+                }
+              }
+
+              .selected-right {
+                color: #ff0000;
+              }
+            }
+          }
+
+          width: 100%;
+          padding: 0 20/100rem;
+          box-sizing: border-box;
+
+          .program {
+            .musicList {
+              margin-top: 20/100rem;
+              width: 100%;
+              box-sizing: border-box;
+
+              li {
+                margin: 20/100rem 0;
+                width: 100%;
+                height: 88/100rem;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .list-left {
+                  width: 85%;
+                  display: flex;
+                  justify-content: start;
+                  align-items: center;
+
+                  .list-circle {
+                    display: none;
+                    width: 56/100rem;
+                    height: 56/100rem;
+                    border-radius: 50%;
+                    border: 1px solid #cccccc;
+                    margin-right: 20/100rem;
+                  }
+
+                  .num {
+                    display: block;
+                    width: 56/100rem;
+                    height: 56/100rem;
+                    text-align: center;
+                    line-height: 56/100rem;
+                    font-weight: bold;
+                    position: relative;
+                    left: -8/100rem;
+                    top: 0;
+                  }
+
+                  .music {
+                    width: 80%;
+                    height: 88/100rem;
+
+                    .music-name {
+                      height: 44/100rem;
+                      width: 100%;
+                      overflow: hidden;
+                      white-space: nowrap;
+                      text-overflow: ellipsis;
+                      font-size: 32/100rem;
+                      font-weight: bold;
+                      color: #333333;
+                      line-height: 44/100rem;
+                    }
+
+                    .music-desc {
+                      height: 44/100rem;
+                      line-height: 44/100rem;
+                      font-size: 24/100rem;
+                      color: #cccccc;
+
+                      img {
+                        width: 24/100rem;
+                        height: 24/100rem;
+                        position: relative;
+                        top: -10/100rem;
+                        left: 0;
+                      }
+
+                      .playCount {
+                        margin: 0 20/100rem;
+                      }
+                    }
+                  }
+                }
+
+                .list-right {
+                  width: 56/100rem;
+                  height: 56/100rem;
+
+                  img {
+                    width: 100%;
+                    height: 100%;
+                  }
+                }
+
+                &.active {
+                  .list-circle {
+                    background: url("../images/detail-it666-checked.png") no-repeat center center;
+                    background-size: 100% 100%;
+                  }
+                }
+              }
+            }
+
+            &.selected {
+              .selected-left {
+                .circle {
+                  background: url("../images/detail-it666-checked.png") no-repeat center center;
+                  background-size: 100% 100%;
+                }
+              }
+            }
+          }
+        }
+      }
+
+    }
+  }
+}

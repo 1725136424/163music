@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>网易云音乐</title>
+    <!--可以让部分国产浏览器默认采用高速模式渲染页面-->
+    <meta content="webkit" name="renderer">
+    <!--为了让 IE 浏览器运行最新的渲染模式下-->
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="网易云音乐，音乐，播放器，网易，下载，播放，DJ，免费，明星，精选，歌单，识别音乐，收藏，分享音乐，音乐互动，高音质，320K，音乐社交，官网，移动站，music.163.com"
+          name="keywords">
+    <meta content="网易云音乐是一款专注于发现与分享的音乐产品，依托专业音乐人、DJ、好友推荐及社交功能，为用户打造全新的音乐生活。" name="description">
+    <script>
+        //获取当前设备像素比
+        let scale = 1 / parseInt(window.devicePixelRatio + "");
+        document.write(`<meta name="viewport" content="width=device-width, initial-scale=${scale}, maximum-scale=${scale}, minimum-scale=${scale}, user-scalable=no">`);
+        let rootSize = window.innerWidth / 7.5 + "px";
+        document.documentElement.style.fontSize = rootSize;
+    </script>
+    <link href="../favicon.ico" rel="short icon">
+    <link href="../apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="../apple-touch-icon114.png" rel="apple-touch-icon" sizes="114x114">
+    <link href="../apple-touch-icon152.png" rel="apple-touch-icon" sizes="152x152">
+    <link href="../apple-touch-icon180.png" rel="apple-touch-icon" sizes="180x180">
+    <link href="../css/reset.css" rel="stylesheet">
+    <link href="../css/swiper.css" rel="stylesheet">
+    <link href="css/index.less" rel="stylesheet/less">
+    <script src="../js/loadHtml.js"></script>
+</head>
+<body>
+
+<!--刷新提示数据开始-->
+<div class="tip">
+    已为您推荐新的个性化内容
+</div>
+<!--刷新提示数据结束-->
+
+<!--头部开始-->
+<div class="header-box"></div>
+<!--头部结束-->
+
+<!--内容开始-->
+<div class="main">
+    <div class="main-in">
+        <div class="pullDown">
+            <img alt="" src="images/pull-down.png">
+            <svg enable-background="new 279.747 366.016 60 60" height="60px" viewBox="279.747 366.016 60 60" width="60px"
+                 x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
+<path d="M301.144,374.58
+	c-16.549,5.334-25.163,23.41-15.075,37.437c8.615,12.051,26.864,15.606,40.692,8.001c10.995-6.025,14.282-18.768,7.368-28.349
+	c-5.555-7.705-17.229-9.977-26.07-5.137c-7.027,3.853-8.614,10.767-5.44,16.298c3.06,5.137,11.221,5.631,15.302,2.667
+	c5.44-4.05,4.193-10.568,1.474-15.31c-14.282-25.09,7.254-24.694,9.975-18.966" fill="none" id="refreshLogo" stroke="#000000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="4"></path>
+</svg>
+        </div>
+        <div class="body">
+            <div class="swiper-container">
+                <div class="swiper-wrapper"></div>
+                <!-- 如果需要分页器 -->
+                <div class="swiper-pagination"></div>
+            </div>
+            <ul class="nav">
+                <li>
+                    <img alt="" src="images/home-it666-rl.png">
+                    <i class="now"></i>
+                    每日推荐
+                </li>
+                <li>
+                    <img alt="" src="images/home-it666-gd.png">
+                    歌单
+                </li>
+                <li>
+                    <img alt="" src="images/home-it666-phb.png">
+                    排行榜
+                </li>
+                <li>
+                    <img alt="" src="images/home-it666-dt.png">
+                    电台
+                </li>
+                <li>
+                    <img alt="" src="images/home-it666-zb.png">
+                    直播
+                </li>
+            </ul>
+            <div class="recommend"></div>
+            <div class="exclusive"></div>
+            <div class="album"></div>
+            <div class="mv"></div>
+            <div class="dj"></div>
+        </div>
+        <div class="pullUp">
+            <img alt="" src="images/pull-up.gif">
+            <span>上拉加载更多</span>
+        </div>
+    </div>
+</div>
+<!--内容结束-->
+
+<!--搜索内容开始-->
+<div class="search-temp"></div>
+<!--搜索内容结束-->
+
+<!--底部开始-->
+<div class="footer-box"></div>
+<!--底部结束-->
+
+<!--定义模板开始-->
+<script id="banner" type="text/html">
+    <% for(let i = 0; i < banners.length; i++){ %>
+    <div class="swiper-slide">
+        <img src="<%=banners[i].pic%>" alt="">
+        <span style="background-color: <%=banners[i].titleColor%>;"><%=banners[i].typeTitle%></span>
+    </div>
+    <% } %>
+</script>
+
+<script id="category" type="text/html">
+    <div class="category">
+        <div class="category-top">
+            <h3 class="category-title"><%=title%></h3>
+            <span class="category-sub"><%=subTitle%></span>
+        </div>
+        <div class="category-body">
+            <ul>
+                <% for(let i = 0; i < result.length; i++){ %>
+                <li style="width: <%=result[i].width%>">
+                    <img src="<%=result[i].picUrl%>">
+                    <p class="category-desc <%=result[i].flag%>"><%=result[i].name%></p>
+                    <% if (title === '新碟新歌' || title === '推荐MV'){ %>
+                    <p class="category-singer"><%=result[i].artists[0].name%></p>
+                    <% } %>
+                    <% if (title === '推荐歌单'){ %>
+                    <div class="play">
+                        <img src="images/home-small-play.png" alt="">
+                        <%=result[i].formatPlayCount%>
+                    </div>
+                    <% } %>
+                    <% if (title === '独家放送'){ %>
+                    <div class="exclusive">
+                        <img src="images/home-small-exclusive.png" alt="">
+                    </div>
+                    <% } %>
+                    <% if (title === '主播电台'){ %>
+                    <div class="video">
+                        <img src="images/home-small-dj.png" alt="">
+                    </div>
+                    <% } %>
+                </li>
+                <% } %>
+            </ul>
+        </div>
+    </div>
+</script>
+<!--定义模板结束-->
+<script src="../js/less.js"></script>
+<script src="../js/zepto.js"></script>
+<script src="../js/event.js"></script>
+<script src="../js/ajax.js"></script>
+<script src="../js/fx.js"></script>
+<script src="../js/fx_methods.js"></script>
+<script src="../js/selector.js"></script>
+<script src="../js/iscroll-probe.js"></script>
+<script src="../js/swiper.js"></script>
+<script src="../js/axios.js"></script>
+<script src="../js/api.js"></script>
+<script src="../js/template-web.js"></script>
+<script src="../js/clamp.js"></script>
+<script src="../js/tool.js"></script>
+<script src="js/home.js"></script>
+</body>
+</html>
